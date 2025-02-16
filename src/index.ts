@@ -25,9 +25,7 @@ class ExcelMcpServer {
   private zSheetName =
     z.string().describe('Sheet name in the Excel file');
   private zRange =
-    z.string().describe('Range of cells in the Excel sheet (e.g., "A1:C10").' +
-        'The number of columns and rows responded is limited to 50x50.'
-    );
+    z.string().describe('Range of cells in the Excel sheet (e.g., "A1:C10")');
   private zData =
     z.array(z.array(z.string())).describe('Data to write to the Excel sheet');
 
@@ -66,7 +64,9 @@ class ExcelMcpServer {
         },
         {
           name: 'read_sheet_data',
-          description: 'Read data from the Excel sheet',
+          description: 'Read data from the Excel sheet.' +
+            'The number of columns and rows responded is limited to 50x50.' +
+            'To read more data, adjust range parameter and make requests again.',
           inputSchema: zodToJsonSchema(this.ReadSheetDataSchema),
         },
         {
