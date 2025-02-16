@@ -25,12 +25,10 @@ For Windows:
 ```json
 {
   "mcpServers": {
-    ...
     "excel": {
         "command": "cmd",
         "args": ["/c", "npx", "--yes", "excel-mcp-server"],
     }
-    ...
 }
 ```
 
@@ -38,12 +36,10 @@ For other platforms:
 ```json
 {
   "mcpServers": {
-    ...
     "excel": {
         "command": "npx",
         "args": ["--yes", "excel-mcp-server"],
     }
-    ...
 }
 ```
 
