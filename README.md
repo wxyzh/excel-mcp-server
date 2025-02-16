@@ -1,6 +1,6 @@
 # Excel MCP Server
 
-![NPM Version](https://img.shields.io/npm/v/excel-mcp-server)
+[![NPM Version](https://img.shields.io/npm/v/excel-mcp-server)](https://www.npmjs.com/package/excel-mcp-server)
 
 A Model Context Protocol (MCP) server that reads and writes spreadsheet data to MS Excel file.
 
