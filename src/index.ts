@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import * as pkg from '../package.json';
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
@@ -19,9 +20,9 @@ class ExcelMcpServer {
 
   private workbookCache = new Map<string, ExcelJS.Workbook>();
 
-  private zFileAbsolutePath = 
+  private zFileAbsolutePath =
     z.string().describe('Absolute path to the Excel file');
-  private zSheetName = 
+  private zSheetName =
     z.string().describe('Sheet name in the Excel file');
   private zRange =
     z.string().describe('Range of cells in the Excel sheet (e.g., "A1:C10").' +
@@ -187,7 +188,7 @@ class ExcelMcpServer {
 
     const workbook = await this.readWorkbook(fileAbsolutePath);
     const worksheet = sheetName ? workbook.getWorksheet(sheetName) : workbook.worksheets[0];
-    
+
     if (!worksheet) {
       throw new McpError(ErrorCode.InvalidParams, `Sheet ${sheetName} not found`);
     }
@@ -199,11 +200,11 @@ class ExcelMcpServer {
 
     if (range) {
       [startCol, startRow, endCol, endRow] = this.parseRange(range);
-      
+
       // データサイズと範囲サイズの整合性チェック
       const rangeRowCount = endRow - startRow + 1;
       const rangeColCount = endCol - startCol + 1;
-      
+
       if (data.length != rangeRowCount) {
         throw new McpError(
           ErrorCode.InvalidParams,

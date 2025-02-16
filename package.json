@@ -1,10 +1,12 @@
 {
   "name": "excel-mcp-server",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "An MCP server that reads and writes spreadsheet data to MS Excel file",
-  "main": "index.js",
   "author": "negokaz",
   "license": "MIT",
+  "bin": {
+    "excel-mcp-server": "dist/index.js"
+  },
   "scripts": {
     "build": "tsc && node -e \"require('fs').chmodSync('dist/index.js', '755')\"",
     "prepare": "npm run build",
