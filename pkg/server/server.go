@@ -32,3 +32,7 @@ func New(version string) *ExcelServer {
 func (s *ExcelServer) Start() error {
 	return server.ServeStdio(s.server)
 }
+
+func (s *ExcelServer) GetMCPServer() *server.MCPServer {
+    return s.server
+}
