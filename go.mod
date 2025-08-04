@@ -1,4 +1,4 @@
-module github.com/negokaz/excel-mcp-server
+module github.com/wxyzh/excel-mcp-server
 
 go 1.23.0
 
@@ -9,6 +9,7 @@ require (
 	github.com/go-ole/go-ole v1.3.0
 	github.com/goccy/go-yaml v1.18.0
 	github.com/mark3labs/mcp-go v0.34.0
+	github.com/negokaz/excel-mcp-server v0.12.0
 	github.com/skanehira/clipboard-image v1.0.0
 	github.com/xuri/excelize/v2 v2.9.2-0.20250717000717-dd07139785fe
 )
