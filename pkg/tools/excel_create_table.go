@@ -8,8 +8,8 @@ import (
 	z "github.com/Oudwins/zog"
 	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"
-	excel "github.com/negokaz/excel-mcp-server/internal/excel"
-	imcp "github.com/negokaz/excel-mcp-server/internal/mcp"
+	excel "github.com/wxyzh/excel-mcp-server/pkg/excel"
+	imcp "github.com/wxyzh/excel-mcp-server/pkg/mcp"
 )
 
 type ExcelCreateTableArguments struct {
